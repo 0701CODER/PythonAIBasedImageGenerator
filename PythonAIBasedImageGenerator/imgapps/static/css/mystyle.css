@@ -1,0 +1,16 @@
+﻿
+
+.slide-image
+{
+	height:170px;
+	width:170px;
+	padding:30px;
+}
+body
+{
+	background-color:#FFF8DC;
+}
+.menutd
+{
+	border-radius:5px 5px 5px 5px;
+}

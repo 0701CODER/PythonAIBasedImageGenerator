@@ -1,0 +1,11 @@
+{% for language in languages %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ language.image }}" alt="Customer image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ language.name}}</h5>
+    <p class="card-text">{{ language.name}}</p>
+    <!--<a href="#" class="btn btn-primary">Buy Now</a>
+	-->
+  </div>
+</div>
+{% endfor %}

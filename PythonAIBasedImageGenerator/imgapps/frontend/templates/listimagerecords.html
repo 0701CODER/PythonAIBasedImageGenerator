@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+{% load static %}
+    <title>Welcome</title>
+	<link rel="stylesheet" type='text/css' href="{% static 'css/mystyle.css' %}" />
+	
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href=  
+"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
+</head>
+<body>
+
+  <center>
+  
+   {% include 'top.html' %} 
+     
+     
+	  <center><h1>List Image Records</h1></center>
+   <div class="main">
+   <table class="table table-striped" style="width: 100%;">
+   <tr>
+   <th>Images List</th>
+   </tr>
+   <tr>
+   <td>UserName: &nbsp;{{username}} <br/>
+   Records Count: &nbsp;
+   {{imagerecordscount}}
+   <table>
+<tr>
+    <th>UserName</th>
+    <th style='width:200px'> Entry Time</th> 
+    <th style='width:200px'>Image Text</th>
+	<th>Image1</td>
+	<!--<th>Image2</td>
+	<th>Image3</td> -->
+    
+</tr>
+    {% for data in imagerecords %}
+	{% if username == data.username %}
+<tr>
+    <td>{{data.username}}</td>
+	<td>{{data.entrytime}}</td>
+	   <td>{{data.ImageText}}</td>
+	   <td>
+	   <img style='border-radius:5px' src='/media/{{data.entrytime}}-newoutput_0.png' width='300' height='300'/>
+	   </td>
+	  <!-- <td>
+	<img style='border-radius:5px' src='/media/{{data.entrytime}}-newoutput_1.png' width='100' height='100'/>
+	</td>
+	<td>
+	<img style='border-radius:5px' src='/media/{{data.entrytime}}-newoutput_2.png' width='100' height='100'/>
+	   </td>-->
+    </tr>
+	{% endif %}
+{% endfor %}
+</table>
+   </td>
+   
+   </tr>
+   <tr>
+   <td align='center'>
+   <!--
+   <img style='border-radius:5px' src='{{ images }}' width='300' height='300'/>
+   -->
+   </td>
+   </tr>
+	</table>
+ 
+</div>
+<a href='/createimagerecord'>Back</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<!--<a href='/csv'>Download as CSV</a>&nbsp;&nbsp;&nbsp;&nbsp;
+-->
+<!--<a href='/CalculateLabelZones'>Label(AutoDetect) Zones</a>
+-->
+</center>
+</body>
+</html>

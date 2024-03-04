@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<!--
+
+he Data Source as an Object
+
+In the previous examples the data source was an array, but we can also use an object.
+
+Assume you have an object with key-value pairs:
+$scope.cars = {
+  car01 : "Ford",
+  car02 : "Fiat",
+  car03 : "Volvo"
+};
+
+The expression in the ng-options attribute is a bit different for objects:
+Example
+
+Using an object as the data source, x represents the key, and y represents the value:
+
+-->
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<p>Select a car:</p>
+
+<select ng-model="selectedCar" ng-options="x for (x, y) in cars">
+</select>
+
+<h1>You selected: {{selectedCar}}</h1>
+
+</div>
+
+<p>This example demonstrates the use of an object as the data source when creating a dropdown list.</p>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.cars = {
+        car01 : "Ford",
+        car02 : "Fiat",
+        car03 : "Volvo"
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="css/jquery.min.js"></script>
+  <script src="css/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/all.css">
+  </head>
+  <body>
+  <table class="table table-bordered table-striped">
+  <tr>
+  <td>
+  
+  Sno
+  </td>
+  </tr>
+  </table>
+  
+<div class="main">
+ 
+   {% for data in dataset %}
+ 
+    <b>{{ data.customerid }}</b><br/>
+    {{ data.customername }}<br/>
+    <hr/>
+ 
+    {% endfor %}
+ 
+</div>
+</body>

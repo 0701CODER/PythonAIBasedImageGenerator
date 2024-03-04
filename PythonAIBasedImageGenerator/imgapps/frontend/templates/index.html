@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+{% load static %}
+    <title>Welcome</title>
+	<link rel="stylesheet" type='text/css' href="{% static 'css/mystyle.css' %}" />
+	
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href=  
+"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
+</head>
+<body>
+
+  
+  
+   {% include 'top.html' %} 
+   
+  <img style="width: 100%; height: 450px;border-radius:10px"
+alt="Image description" src="{% static 'images/robot1.jpg' %}"/>
+
+  <!--<center> 
+    <h1>ZONE BASED ALERTING</h1>
+	</center>
+	<img style="width: 100%; height: 150px;"
+alt="Image description" src="{% static 'images/header.jpg' %}"/>
+ <a href='/createzonerecord'>Add location</a>
+-->
+  <!--  <input type="text" id="tags"> -->
+  <!--  <script>
+  $( function() {
+    var availableTags = [
+        {% for language in languages %}
+            "{{language.name}}",
+        {% endfor %}
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+  -->
+</body>
+</html>

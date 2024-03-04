@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'css/jquery.min.js' %}"></script>
+<script src="{% static 'css/bootstrap.min.js' %}"></script> 
+ <link rel="stylesheet" href="{% static 'css/all.css' %}"></link>
+ 
+ <center> 
+    <h1>ARITIFICIAL INTELLIGENCE BASED IMAGE GENERATOR</h1>
+	</center>
+	<img style="width: 100%; height: 150px;"
+alt="Image description" src="{% static 'images/header.jpg' %}"/>
+
+<table class='table table-bdordered'> 
+<tr>
+
+<td>
+ <a href='/createuserrecord'>Create User</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ </td>
+<td>
+ <a href='/login'>User Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ </td>
+ <td><a href='/listuserrecords'>List User Records</a>
+ </td>
+<td>
+ <a href='/createimagerecord'>New Image</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ </td>
+ <td><a href='/listimagerecords'>List Image Records</a>
+ </td>
+ <td>
+ <a href='/logout'>User Logout</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ </td>
+
+ <!--<td><a href='/zonewisecount'>Zone wise Count</a>
+ </td>
+ <td>
+ <a href='/csvproposed'>Download as CSV</a>
+ </td>
+ -->
+ </tr>
+ </table>
+ 
+ 

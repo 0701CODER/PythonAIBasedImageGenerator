@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+{% load static %}
+    <title>User Registration</title>
+	<link rel="stylesheet" type='text/css' href="{% static 'css/mystyle.css' %}" />
+	
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href=  
+"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
+</head>
+<body>
+
+  <center>
+  
+   {% include 'top.html' %} 
+<form name='myUserForm' method="POST" enctype="multipart/form-data">
+ 
+    <!-- Security token -->
+    {% csrf_token %}
+ 
+    <!-- Using the formset 
+    {{ form.as_p }}
+	
+	-->
+	<center><h1>USER REGISTRATION</h1></center>
+	<table class="table form-table" style="width: 40%;">
+    {{ form.as_table }}
+  </table>
+	
+	<!--{{ form.as_table }}
+	-->
+     
+    <input type="submit" name='submit' value="Add">
+	
+	<input type="reset" value="Clear">
+	<br/>
+	<br/>
+	<a href='/listuserrecords'>List All Records</a>
+</form>
+<center>
+</body>
+</html>
